@@ -1,32 +1,34 @@
 export const stories = [
     {
-        name: 'Amanda',
-        profileImg: '',
-        bgImage: '',
+        name: 'Cesar',
+        profileImg: require('../assets/images/cesar-rincon-unsplash.jpg'),
+        bgImage: require('../assets/images/cesar-rincon-unsplash.jpg'),
+        isAuthUser: true,
     },
     {
-        name: 'jacob',
-        profileImg: '',
-        bgImage: '',
+        name: 'Bruce',
+        profileImg: require('../assets/images/bruce-mars-unsplash.jpg'),
+        bgImage: require('../assets/images/kimson-doan-unsplash.jpg'),
     },
     {
-        name: 'Samantha',
-        profileImg: '',
-        bgImage: '',
+        name: 'Rafaella',
+        profileImg: require('../assets/images/rafaella-mendes-diniz-unsplash.jpg'),
+        bgImage: require('../assets/images/leo-rivas-unsplash.jpg'),
     },
     {
-        name: 'Amanda',
-        profileImg: '',
-        bgImage: '',
+        name: 'Pooja',
+        profileImg: require('../assets/images/pooja-chaudhary-unsplash.jpg'),
+        bgImage: require('../assets/images/redd-unsplash.jpg'),
     },
     {
-        name: 'Amanda',
-        profileImg: '',
-        bgImage: '',
-    }, {
-        name: 'Amanda',
-        profileImg: '',
-        bgImage: '',
+        name: 'Ayo',
+        profileImg: require('../assets/images/ayo-ogunseinde-unsplash.jpg'),
+        bgImage: require('../assets/images/ayo-ogunseinde-unsplash.jpg'),
+    },
+    {
+        name: 'Aiony',
+        profileImg: require('../assets/images/aiony-haust-unsplash.jpg'),
+        bgImage: require('../assets/images/mike-erskine-unsplash.jpg'),
     }
 ];
 
@@ -34,27 +36,35 @@ export const stories = [
 export const categories = [
     {
         name: 'Popular',
+        selected: true,
     },
     {
         name: 'Following',
+        selected: false,
     },
     {
         name: 'New',
+        selected: false,
     },
     {
         name: 'Beach',
+        selected: false,
     },
     {
         name: 'Hiking',
+        selected: false,
     },
     {
         name: 'Cycling',
+        selected: false,
     },
     {
         name: 'Mountain',
+        selected: false,
     },
     {
         name: 'Historical',
+        selected: false,
     }
 ];
 
@@ -62,7 +72,7 @@ export const postsData = [
     {
         id: 1,
         user: {
-            name: 'Amanda',
+            name: 'Micheal',
             profImage: require('../assets/images/image1.png'),
         },
         name: 'Padar Island, Caribbean Sensation in Eastern Indonasia',

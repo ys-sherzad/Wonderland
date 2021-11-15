@@ -6,6 +6,14 @@ import {
 import Animated from 'react-native-reanimated';
 import useScaleAnimation from '../hooks/useScaleAnimation';
 
+const springConfig = {
+    damping: 5,
+    mass: .5,
+    stiffness: 140,
+    overshootClamping: false,
+    restDisplacementThreshold: 0.01,
+    restSpeedThreshold: .5
+};
 
 const Button = ({
     children,
@@ -17,7 +25,8 @@ const Button = ({
         scale,
         scaleAnimation,
     } = useScaleAnimation({
-        initialValue: 1
+        initialValue: 1,
+        springConfig,
     });
 
     const pressIn = () => {

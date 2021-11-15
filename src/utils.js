@@ -1,5 +1,17 @@
+import { Dimensions } from 'react-native';
+
+export const SCR_HEIGHT = Dimensions.get('window').height;
+export const SCR_WIDTH = Dimensions.get('window').width;
+
 export const LAYOUT_HORIZONTAL_PADDING = 20;
 export const HEADER_HEIGHT = 80;
+export const ACTIONS_CONTAINER_HEIGHT = 54;
+
+export const gradientColors = [
+    'rgba(28, 28, 28, 0.3)',
+    'rgba(28, 28, 28, 0.25)',
+    'rgba(28, 28, 28, 0.3)',
+];
 
 
 export const elevation_1 = {

@@ -1,32 +1,30 @@
 import React from 'react';
-import { useAnimatedStyle, useSharedValue, withSpring } from 'react-native-reanimated';
-import { elevation_1, elevation_2, elevation_8 } from '../utils';
-
-const springConfig = {
-    damping: 5,
-    mass: .5,
-    stiffness: 140,
-    overshootClamping: false,
-    restDisplacementThreshold: 0.01,
-    restSpeedThreshold: .5
-};
+import { useAnimatedStyle, useSharedValue, withSpring, withTiming } from 'react-native-reanimated';
 
 const useScaleAnimation = ({
     initialValue,
+    springConfig,
 }) => {
     const scale = useSharedValue(initialValue);
 
     const scaleAnimation = useAnimatedStyle(() => {
         return {
             transform: [{
-                scale: withSpring(scale.value, springConfig),
+                scale: withSpring(scale.value, springConfig ?? null),
             }],
+        };
+    });
+
+    const padding = useAnimatedStyle(() => {
+        return {
+            paddingHorizontal: withTiming(scale.value === 1 ? 10 : 30),
         };
     });
 
     return {
         scale,
         scaleAnimation,
+        padding
     };
 };
 
