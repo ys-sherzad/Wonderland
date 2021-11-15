@@ -16,7 +16,6 @@ export default Text;
 
 const styles = StyleSheet.create({
     default: {
-        // fontFamily: 'Poppins-Regular'
-        color: '#fffff'
+        fontFamily: 'Ubuntu'
     }
 });
