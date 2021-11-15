@@ -11,24 +11,32 @@ import Header from './Header';
 import Stories from './Stories';
 
 
-const Home = () => (
-    <View style={{ flexGrow: 1, }}>
-        <View style={{
-            height: '40%',
-        }}>
-            <Header />
-            <Spacer size={18} />
-            <Stories />
-            <Spacer size={20} />
-            <TopTabs />
-        </View>
+const Home = () => {
 
-        <View style={{
-            height: '60%',
-        }}>
-            <PostListWrapper />
+    const [selectedTabIndex, setSelectedTabIndex] = useState(0);
+
+    return (
+        <View style={{ flexGrow: 1, }}>
+            <View style={{
+                height: '40%',
+            }}>
+                <Header />
+                <Spacer size={18} />
+                <Stories />
+                <Spacer size={20} />
+                <TopTabs
+                    selectedTabIndex={selectedTabIndex}
+                    setSelectedTabIndex={setSelectedTabIndex}
+                />
+            </View>
+
+            <View style={{
+                height: '60%',
+            }}>
+                <PostListWrapper />
+            </View>
         </View>
-    </View>
-);
+    );
+};
 
 export default Home;

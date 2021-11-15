@@ -36,35 +36,27 @@ export const stories = [
 export const categories = [
     {
         name: 'Popular',
-        selected: true,
     },
     {
         name: 'Following',
-        selected: false,
     },
     {
         name: 'New',
-        selected: false,
     },
     {
         name: 'Beach',
-        selected: false,
     },
     {
         name: 'Hiking',
-        selected: false,
     },
     {
         name: 'Cycling',
-        selected: false,
     },
     {
         name: 'Mountain',
-        selected: false,
     },
     {
         name: 'Historical',
-        selected: false,
     }
 ];
 

@@ -1,29 +1,17 @@
-import React, { useState } from 'react';
-import { View, ScrollView } from 'react-native';
+import React from 'react';
+import { ScrollView } from 'react-native';
 import { categories } from '../data';
 import { LAYOUT_HORIZONTAL_PADDING } from '../utils';
 import Tab from './Tab';
 
-const TopTabs = ({ }) => {
-    const [tabs, setTabs] = useState(categories);
-    const isLastTab = tabs === categories.length - 1;
+const TopTabs = ({
+    selectedTabIndex,
+    setSelectedTabIndex
+}) => {
 
-    const handleSelectedTab = (category) => {
-        const newTabs = tabs.map(tab => {
-            if (tab.name === category.name) {
-                return {
-                    ...tab,
-                    selected: true
-                };
+    console.log('THIS RUNNING TOP TABS');
 
-            }
-            return {
-                ...tab,
-                selected: false
-            };
-        });
-        setTabs(newTabs);
-    };
+    const isLastTab = categories === categories.length - 1;
 
     return (
         <ScrollView
@@ -33,13 +21,13 @@ const TopTabs = ({ }) => {
                 paddingHorizontal: LAYOUT_HORIZONTAL_PADDING - 8,
             }}
         >
-            {tabs.map((category, index) => (
+            {categories.map((category, index) => (
                 <Tab
                     name={category.name}
-                    selected={category.selected}
+                    selected={index === selectedTabIndex}
                     key={index}
                     isLastTab={isLastTab}
-                    onPress={() => handleSelectedTab(category)}
+                    onPress={() => setSelectedTabIndex(index)}
                 />
             ))}
         </ScrollView>
