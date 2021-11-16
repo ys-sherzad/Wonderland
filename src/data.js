@@ -7,7 +7,7 @@ export const stories = [
     },
     {
         name: 'Mirana',
-        profileImg: require('../assets/images/christopher-campbell-unsplash.png'),
+        profileImg: require('../assets/images/christopher-campbell-unsplash.jpg'),
         bgImage: require('../assets/images/sobhan-joodi-unsplash.jpg'),
     },
     {
@@ -17,7 +17,7 @@ export const stories = [
     },
     {
         name: 'Pooja',
-        profileImg: require('../assets/images/ben-parker-unsplash.png'),
+        profileImg: require('../assets/images/ben-parker-unsplash.jpg'),
         bgImage: require('../assets/images/redd-unsplash.jpg'),
     },
     {
