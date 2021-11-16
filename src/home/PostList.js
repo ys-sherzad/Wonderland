@@ -28,7 +28,9 @@ const PostList = () => {
 
     const [posts, setPosts] = useState(postsData);
 
-    // FIXME: refactor this code
+    // FIXME: refactor this function
+    // we could keep a list of key pair values 
+    // mapping to the post instead
     const handleLike = (post) => {
         const updatedPosts = posts.map((p) => {
             if (post.id === p.id) {
