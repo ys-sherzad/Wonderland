@@ -1,6 +1,7 @@
 # Wonderland 👑
 A travel app concept built using React Native.
-Design credits: [https://www.instagram.com/_ydntkwia/](@_ydntkwia)
+Design credits: 
+[https://www.instagram.com/_ydntkwia/](@_ydntkwia)
 
 ![](WonderlandScreenshot.png)
 
