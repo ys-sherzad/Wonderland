@@ -2,7 +2,7 @@
 A travel app concept built using React Native.
 Design credits: 
 
-![](PerkyScreenshot.png)
+![](WonderlandScreenshot.png)
 
 **Installation**
 
