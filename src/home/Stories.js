@@ -8,7 +8,8 @@ import LinearGradient from 'react-native-linear-gradient';
 import Text from './Text';
 import {
     LAYOUT_HORIZONTAL_PADDING,
-    gradientColors
+    gradientColors,
+    animationDelay
 } from '../utils';
 import { stories } from '../data';
 import ScaleAnimation from './ScaleAnimation';
@@ -26,7 +27,7 @@ const Stories = ({
             }}>
             {stories.map((story, index) => (
                 <ScaleAnimation
-                    delay={1000}
+                    delay={animationDelay['story-container']}
                     key={index}
                     customContainerStyle={{
                         width: 112,
@@ -40,7 +41,7 @@ const Stories = ({
                 >
                     <View>
                         <ScaleAnimation
-                            delay={1100}
+                            delay={animationDelay['story-profileImg']}
                         >
                             <Image
                                 source={story.profileImg}
@@ -61,7 +62,7 @@ const Stories = ({
                         bottom: 15,
                     }}>
                         <ScaleAnimation
-                            delay={1150}
+                            delay={animationDelay['story-name']}
                         >
                             <Text style={{
                                 fontSize: 11,

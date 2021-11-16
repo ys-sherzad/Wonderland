@@ -13,6 +13,7 @@ import {
     gradientColors,
     LAYOUT_HORIZONTAL_PADDING,
     numberWithCommas,
+    animationDelay,
 } from '../utils';
 import Spacer from './Spacer';
 import Button from './Button';
@@ -27,6 +28,7 @@ const PostList = () => {
 
     const [posts, setPosts] = useState(postsData);
 
+    // FIXME: refactor this code
     const handleLike = (post) => {
         const updatedPosts = posts.map((p) => {
             if (post.id === p.id) {
@@ -60,7 +62,7 @@ const PostList = () => {
                 paddingVertical: 8,
             }}>
                 {posts.map((post, index) => (
-                    <Slide key={index} delay={1500}>
+                    <Slide key={index} delay={animationDelay['post']}>
                         <View style={{
                             height: 200,
                             borderRadius: 26,

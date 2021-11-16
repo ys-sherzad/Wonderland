@@ -37,3 +37,14 @@ export const elevation = {
         }
     })
 };
+
+
+
+export const animationDelay = {
+    'header': 800,
+    'story-container': 1000,
+    'story-profileImg': 1100,
+    'story-name': 1150,
+    'tabs-container': 1300,
+    'post': 1500,
+};

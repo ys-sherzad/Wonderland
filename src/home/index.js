@@ -11,6 +11,14 @@ import Header from './Header';
 import Stories from './Stories';
 import { SCR_HEIGHT } from '../utils';
 
+/**
+ * 
+ * Sorry, but all styles are inline,
+ * you may suffer a bit.
+ * Will refactor this soon. :) 
+ * 
+ */
+
 const Home = () => {
 
     const [selectedTabIndex, setSelectedTabIndex] = useState(0);

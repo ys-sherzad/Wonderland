@@ -3,6 +3,7 @@ import { View, Image } from 'react-native';
 import Text from './Text';
 import NotificationBell from './NotificationBell';
 import {
+    animationDelay,
     HEADER_HEIGHT,
     LAYOUT_HORIZONTAL_PADDING
 } from '../utils';
@@ -23,7 +24,9 @@ const Header = ({
                 alignItems: 'center',
                 flex: 1,
             }}>
-                <ScaleAnimation>
+                <ScaleAnimation
+                    delay={animationDelay['header']}
+                >
                     <Image
                         source={require('../../assets/images/cesar-rincon-unsplash.jpg')}
                         style={{
@@ -37,7 +40,9 @@ const Header = ({
                 <View style={{
                     paddingLeft: 12,
                 }}>
-                    <ScaleAnimation>
+                    <ScaleAnimation
+                        delay={animationDelay['header']}
+                    >
                         <Text style={{
                             fontSize: 12,
                             color: theme.textSecondary,
@@ -53,7 +58,9 @@ const Header = ({
                 </View>
             </View>
 
-            <ScaleAnimation>
+            <ScaleAnimation
+                delay={animationDelay['header']}
+            >
                 <NotificationBell />
             </ScaleAnimation>
         </View>

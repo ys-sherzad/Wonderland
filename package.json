@@ -1,8 +1,8 @@
 {
   "name": "wonderland",
   "version": "0.0.1",
-  "author": "Yasir Sherzad <ys.sherzad@gmail.com>",
-  "description": "Perky",
+  "author": "Yasir Sherzad <ysherzad.dev>",
+  "description": "Wonderland. A travel app concept built with React Native.",
   "repository": "https://github.com/ys-sherzad/Wonderland",
   "license": "Apache License 2.0",
   "private": true,

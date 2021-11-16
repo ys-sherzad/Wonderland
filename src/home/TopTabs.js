@@ -1,7 +1,7 @@
 import React from 'react';
 import { ScrollView } from 'react-native';
 import { categories } from '../data';
-import { LAYOUT_HORIZONTAL_PADDING } from '../utils';
+import { animationDelay, LAYOUT_HORIZONTAL_PADDING } from '../utils';
 import ScaleAnimation from './ScaleAnimation';
 import Tab from './Tab';
 
@@ -13,7 +13,7 @@ const TopTabs = ({
     const isLastTab = categories === categories.length - 1;
 
     return (
-        <ScaleAnimation delay={1300}>
+        <ScaleAnimation delay={animationDelay['tabs-container']}>
             <ScrollView
                 horizontal
                 showsHorizontalScrollIndicator={false}

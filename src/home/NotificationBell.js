@@ -24,7 +24,7 @@ const NotificationBell = () => {
         setTimeout(() => {
             runAnimation();
             setShowDot(true);
-        }, 3000);
+        }, 6000);
     }, []);
 
     const defaultStyle = {
