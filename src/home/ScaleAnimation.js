@@ -6,7 +6,7 @@ import Animated, {
     withSpring
 } from 'react-native-reanimated';
 
-const DELAY = 500;
+const DELAY = 800;
 
 const springConfig = {
     damping: 12,
@@ -30,7 +30,6 @@ const ScaleAnimation = ({
     }, []);
 
     const scaleAnim = useAnimatedStyle(() => {
-
         return {
             transform: [{
                 scale: withDelay(delay,

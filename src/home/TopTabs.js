@@ -2,6 +2,7 @@ import React from 'react';
 import { ScrollView } from 'react-native';
 import { categories } from '../data';
 import { LAYOUT_HORIZONTAL_PADDING } from '../utils';
+import ScaleAnimation from './ScaleAnimation';
 import Tab from './Tab';
 
 const TopTabs = ({
@@ -9,28 +10,32 @@ const TopTabs = ({
     setSelectedTabIndex
 }) => {
 
-    console.log('THIS RUNNING TOP TABS');
-
     const isLastTab = categories === categories.length - 1;
 
     return (
-        <ScrollView
-            horizontal
-            showsHorizontalScrollIndicator={false}
-            contentContainerStyle={{
-                paddingHorizontal: LAYOUT_HORIZONTAL_PADDING - 8,
-            }}
-        >
-            {categories.map((category, index) => (
-                <Tab
-                    name={category.name}
-                    selected={index === selectedTabIndex}
-                    key={index}
-                    isLastTab={isLastTab}
-                    onPress={() => setSelectedTabIndex(index)}
-                />
-            ))}
-        </ScrollView>
+        <ScaleAnimation delay={1300}>
+            <ScrollView
+                horizontal
+                showsHorizontalScrollIndicator={false}
+                contentContainerStyle={{
+                    paddingHorizontal: LAYOUT_HORIZONTAL_PADDING - 8,
+                }}
+            >
+                {categories.map((category, index) => {
+                    return (
+
+                        <Tab
+                            name={category.name}
+                            selected={index === selectedTabIndex}
+                            key={index}
+                            isLastTab={isLastTab}
+                            onPress={() => setSelectedTabIndex(index)}
+                        />
+
+                    );
+                })}
+            </ScrollView>
+        </ScaleAnimation>
     );
 };
 

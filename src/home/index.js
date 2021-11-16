@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useState } from 'react';
 import {
     View,
 } from 'react-native';
@@ -9,7 +9,7 @@ import TopTabs from './TopTabs';
 import PostListWrapper from './PostListWrapper';
 import Header from './Header';
 import Stories from './Stories';
-
+import { SCR_HEIGHT } from '../utils';
 
 const Home = () => {
 
@@ -18,12 +18,12 @@ const Home = () => {
     return (
         <View style={{ flexGrow: 1, }}>
             <View style={{
-                height: '40%',
+                height: 330
             }}>
                 <Header />
-                <Spacer size={18} />
+                <Spacer size={10} />
                 <Stories />
-                <Spacer size={20} />
+                <Spacer size={5} />
                 <TopTabs
                     selectedTabIndex={selectedTabIndex}
                     setSelectedTabIndex={setSelectedTabIndex}
@@ -31,9 +31,11 @@ const Home = () => {
             </View>
 
             <View style={{
-                height: '60%',
+                height: SCR_HEIGHT - 330
             }}>
-                <PostListWrapper />
+                <PostListWrapper
+                    selectedTabIndex={selectedTabIndex}
+                />
             </View>
         </View>
     );

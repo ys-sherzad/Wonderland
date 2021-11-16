@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react';
 import { TouchableWithoutFeedback } from 'react-native';
 import Animated from 'react-native-reanimated';
-import useScaleAnimation from '../hooks/useScaleAnimation';
+import useTabAnimation from '../hooks/useTabAnimation';
+import { theme } from '../theme';
 import Spacer from './Spacer';
 
 const Tab = ({
@@ -24,11 +25,11 @@ const Tab = ({
         scale,
         scaleAnimation,
         padding
-    } = useScaleAnimation({ initialValue: 1, springConfig });
+    } = useTabAnimation({ initialValue: 1, springConfig });
 
     const textStyle = selected
-        ? { fontWeight: '700' }
-        : { fontWeight: '400' };
+        ? { fontWeight: '700', color: theme.text }
+        : { fontWeight: '400', color: theme.inactive };
 
     useEffect(() => {
         if (selected) {
@@ -37,6 +38,10 @@ const Tab = ({
             scale.value = 1;
         }
     }, [selected]);
+
+    const textDefaultStyle = {
+        fontFamily: 'Ubuntu'
+    };
 
     return (
         <TouchableWithoutFeedback
@@ -48,7 +53,7 @@ const Tab = ({
                 alignItems: 'center',
             }, padding]}>
                 <Animated.Text style={[
-                    { color: 'black', fontFamily: 'Ubuntu' },
+                    textDefaultStyle,
                     textStyle,
                     scaleAnimation
                 ]}>{name}</Animated.Text>

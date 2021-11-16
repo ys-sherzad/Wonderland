@@ -1,49 +1,34 @@
-import React, { useState, useRef } from 'react';
+import React, { useRef, useEffect, useMemo } from 'react';
 import {
     ScrollView
 } from 'react-native';
-import { postsData } from '../data';
+import { categories } from '../data';
 import PostList from './PostList';
+import { SCR_WIDTH } from '../utils';
 
-const PostListWrapper = ({ }) => {
-
-    const [posts, setPosts] = useState(postsData);
+const PostListWrapper = ({
+    selectedTabIndex
+}) => {
 
     const scrollViewRef = useRef();
 
-    // useEffect(() => {
-    //     setTimeout(() => {
-    //         scrollViewRef.current.scrollTo({
-    //             x: SCR_WIDTH,
-    //             y: 0,
-    //             animated: true
-    //         });
-    //     }, 3000);
-    // }, []);
+    useEffect(() => {
+        if (scrollViewRef.current) {
+            scrollViewRef.current.scrollTo({
+                x: selectedTabIndex * SCR_WIDTH,
+                y: 0,
+                animated: true
+            });
+        }
+    }, [selectedTabIndex]);
 
-
-    const handleLike = (post) => {
-        const updatedPosts = posts.map((p) => {
-            if (post.id === p.id) {
-                if (!p.isLiked) {
-                    return {
-                        ...p,
-                        isLiked: true,
-                        likesCount: p.likesCount + 1,
-                    };
-                } else {
-                    return {
-                        ...p,
-                        isLiked: false,
-                        likesCount: p.likesCount - 1,
-                    };
-                }
-            }
-            return p;
+    const postLists = useMemo(() => {
+        return categories.map(cat => {
+            return (
+                <PostList key={cat.name} />
+            );
         });
-
-        setPosts(updatedPosts);
-    };
+    }, [categories]);
 
     return (
         <ScrollView
@@ -53,19 +38,12 @@ const PostListWrapper = ({ }) => {
             scrollEnabled={false}
             showsHorizontalScrollIndicator={false}
             style={{
-                flex: 1
+                flex: 1,
+                paddingBottom: 50
             }}
         >
-            <PostList
-                posts={posts}
-                handleLike={handleLike}
-            />
-            <PostList
-                posts={posts}
-                handleLike={handleLike}
-            />
+            {postLists}
         </ScrollView>
-
     );
 };
 

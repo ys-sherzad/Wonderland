@@ -11,53 +11,67 @@ import {
     gradientColors
 } from '../utils';
 import { stories } from '../data';
+import ScaleAnimation from './ScaleAnimation';
 
 const Stories = ({
 }) => {
     return (
         <ScrollView
-            style={{ height: 160 }}
+            style={{ height: 180 }}
             horizontal
             showsHorizontalScrollIndicator={false}
             contentContainerStyle={{
                 paddingHorizontal: LAYOUT_HORIZONTAL_PADDING,
+                paddingVertical: 10,
             }}>
             {stories.map((story, index) => (
-                <View key={index} style={{
-                    width: 112,
-                    backgroundColor: 'red',
-                    marginRight: 8,
-                    borderRadius: 16,
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    overflow: 'hidden'
-                }}>
+                <ScaleAnimation
+                    delay={1000}
+                    key={index}
+                    customContainerStyle={{
+                        width: 112,
+                        backgroundColor: 'red',
+                        marginRight: 8,
+                        borderRadius: 16,
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        overflow: 'hidden'
+                    }}
+                >
                     <View>
-                        <Image
-                            source={story.profileImg}
-                            style={{
-                                height: 32,
-                                width: 32,
-                                resizeMode: 'cover',
-                                borderRadius: 8,
-                                borderWidth: 1,
-                                borderColor: '#F0EFEF',
-                            }}
-                        />
+                        <ScaleAnimation
+                            delay={1100}
+                        >
+                            <Image
+                                source={story.profileImg}
+                                style={{
+                                    height: 32,
+                                    width: 32,
+                                    resizeMode: 'cover',
+                                    borderRadius: 8,
+                                    borderWidth: 1,
+                                    borderColor: '#F0EFEF',
+                                }}
+                            />
+                        </ScaleAnimation>
                     </View>
 
                     <View style={{
                         position: 'absolute',
                         bottom: 15,
                     }}>
-                        <Text style={{
-                            fontSize: 11,
-                            color: 'white',
-                            fontWeight: '500',
-                            textShadowColor: 'rgba(0, 0, 0, 0.15)',
-                            textShadowOffset: { width: -1, height: 1 },
-                            textShadowRadius: 10
-                        }}>{story.name}</Text>
+                        <ScaleAnimation
+                            delay={1150}
+                        >
+                            <Text style={{
+                                fontSize: 11,
+                                color: 'white',
+                                fontWeight: '500',
+                                textShadowColor: 'rgba(0, 0, 0, 0.15)',
+                                textShadowOffset: { width: -1, height: 1 },
+                                textShadowRadius: 10
+                            }}>{story.isAuthUser ? 'Add story' : story.name}</Text>
+                        </ScaleAnimation>
                     </View>
 
                     <Image
@@ -86,9 +100,10 @@ const Stories = ({
                             zIndex: -1,
                         }}
                     />
-                </View>
+                </ScaleAnimation>
             ))}
         </ScrollView>
+
     );
 };
 
