@@ -10,8 +10,6 @@ const TopTabs = ({
     setSelectedTabIndex
 }) => {
 
-    const isLastTab = categories === categories.length - 1;
-
     return (
         <ScaleAnimation delay={animationDelay['tabs-container']}>
             <ScrollView
@@ -23,15 +21,13 @@ const TopTabs = ({
             >
                 {categories.map((category, index) => {
                     return (
-
                         <Tab
                             name={category.name}
                             selected={index === selectedTabIndex}
                             key={index}
-                            isLastTab={isLastTab}
+
                             onPress={() => setSelectedTabIndex(index)}
                         />
-
                     );
                 })}
             </ScrollView>

@@ -3,12 +3,10 @@ import { TouchableWithoutFeedback } from 'react-native';
 import Animated from 'react-native-reanimated';
 import useTabAnimation from '../hooks/useTabAnimation';
 import { theme } from '../theme';
-import Spacer from './Spacer';
 
 const Tab = ({
     name,
     selected,
-    isLastTab,
     onPress,
 }) => {
 
@@ -51,14 +49,13 @@ const Tab = ({
                 height: 50,
                 justifyContent: 'center',
                 alignItems: 'center',
+                borderWidth: 1
             }, padding]}>
                 <Animated.Text style={[
                     textDefaultStyle,
                     textStyle,
                     scaleAnimation
                 ]}>{name}</Animated.Text>
-
-                {!isLastTab && <Spacer horizontal size={20} />}
             </Animated.View>
         </TouchableWithoutFeedback>
     );
