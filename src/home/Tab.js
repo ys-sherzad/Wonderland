@@ -49,7 +49,6 @@ const Tab = ({
                 height: 50,
                 justifyContent: 'center',
                 alignItems: 'center',
-                borderWidth: 1
             }, padding]}>
                 <Animated.Text style={[
                     textDefaultStyle,
