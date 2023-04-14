@@ -12,11 +12,11 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		2F879D9AAF09404EA5E72355 /* Ubuntu-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 693F12B6CD7048FB8226CAC8 /* Ubuntu-Medium.ttf */; };
+		4AD10C3D2EDB4F3CB7CFEC77 /* Ubuntu-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 430BAA95A4B045B3A12DA4AA /* Ubuntu-Bold.ttf */; };
 		7699B88040F8A987B510C191 /* libPods-Wonderland-WonderlandTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-Wonderland-WonderlandTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		4AD10C3D2EDB4F3CB7CFEC77 /* Ubuntu-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 430BAA95A4B045B3A12DA4AA /* Ubuntu-Bold.ttf */; };
 		A5A3E66D4AA34E41840B1EC8 /* Ubuntu-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FD03CD20DED5450DB15C588F /* Ubuntu-Light.ttf */; };
-		2F879D9AAF09404EA5E72355 /* Ubuntu-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 693F12B6CD7048FB8226CAC8 /* Ubuntu-Medium.ttf */; };
 		F97257BD33BD4300B3B1FF13 /* Ubuntu-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AD5128AFA6DC4BE9860987B3 /* Ubuntu-Regular.ttf */; };
 /* End PBXBuildFile section */
 
@@ -42,16 +42,16 @@
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Wonderland/main.m; sourceTree = "<group>"; };
 		19F6CBCC0A4E27FBF8BF4A61 /* libPods-Wonderland-WonderlandTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Wonderland-WonderlandTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B4392A12AC88292D35C810B /* Pods-Wonderland.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wonderland.debug.xcconfig"; path = "Target Support Files/Pods-Wonderland/Pods-Wonderland.debug.xcconfig"; sourceTree = "<group>"; };
+		430BAA95A4B045B3A12DA4AA /* Ubuntu-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Ubuntu-Bold.ttf"; path = "../assets/fonts/Ubuntu-Bold.ttf"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-Wonderland.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wonderland.release.xcconfig"; path = "Target Support Files/Pods-Wonderland/Pods-Wonderland.release.xcconfig"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-Wonderland-WonderlandTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wonderland-WonderlandTests.debug.xcconfig"; path = "Target Support Files/Pods-Wonderland-WonderlandTests/Pods-Wonderland-WonderlandTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-Wonderland.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Wonderland.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		693F12B6CD7048FB8226CAC8 /* Ubuntu-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Ubuntu-Medium.ttf"; path = "../assets/fonts/Ubuntu-Medium.ttf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Wonderland/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-Wonderland-WonderlandTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wonderland-WonderlandTests.release.xcconfig"; path = "Target Support Files/Pods-Wonderland-WonderlandTests/Pods-Wonderland-WonderlandTests.release.xcconfig"; sourceTree = "<group>"; };
+		AD5128AFA6DC4BE9860987B3 /* Ubuntu-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Ubuntu-Regular.ttf"; path = "../assets/fonts/Ubuntu-Regular.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		430BAA95A4B045B3A12DA4AA /* Ubuntu-Bold.ttf */ = {isa = PBXFileReference; name = "Ubuntu-Bold.ttf"; path = "../assets/fonts/Ubuntu-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		FD03CD20DED5450DB15C588F /* Ubuntu-Light.ttf */ = {isa = PBXFileReference; name = "Ubuntu-Light.ttf"; path = "../assets/fonts/Ubuntu-Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		693F12B6CD7048FB8226CAC8 /* Ubuntu-Medium.ttf */ = {isa = PBXFileReference; name = "Ubuntu-Medium.ttf"; path = "../assets/fonts/Ubuntu-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		AD5128AFA6DC4BE9860987B3 /* Ubuntu-Regular.ttf */ = {isa = PBXFileReference; name = "Ubuntu-Regular.ttf"; path = "../assets/fonts/Ubuntu-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		FD03CD20DED5450DB15C588F /* Ubuntu-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Ubuntu-Light.ttf"; path = "../assets/fonts/Ubuntu-Light.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,7 +158,7 @@
 			sourceTree = "<group>";
 		};
 		F9C7F9B1C24C408EB04183E1 /* Resources */ = {
-			isa = "PBXGroup";
+			isa = PBXGroup;
 			children = (
 				430BAA95A4B045B3A12DA4AA /* Ubuntu-Bold.ttf */,
 				FD03CD20DED5450DB15C588F /* Ubuntu-Light.ttf */,
@@ -166,8 +166,8 @@
 				AD5128AFA6DC4BE9860987B3 /* Ubuntu-Regular.ttf */,
 			);
 			name = Resources;
-			sourceTree = "<group>";
 			path = "";
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
