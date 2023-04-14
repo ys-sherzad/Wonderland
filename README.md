@@ -41,5 +41,8 @@ yarn android
 
 Feel free to create an issue if you face any problems running the project.
 
+---
+
 **Brought to you by:**
-[www.codeys.io](https://codeys.io)
+**[Codeys.io](https://codeys.io)**
+_Transforming mobile experiences for businesses and developers._
