@@ -43,6 +43,7 @@ Feel free to create an issue if you face any problems running the project.
 
 ---
 
-**Brought to you by:**
-**[Codeys.io](https://codeys.io)**
+__Brought to you by:__
+[Codeys.io](https://codeys.io) 💎 
+
 _Transforming mobile experiences for businesses and developers._
